@@ -50,7 +50,7 @@ str(fit$sampler_diagnostics())
 library(brms)
 library(tidyverse)
 
-# fit a testing model from brms, use rstan as the backend
+# fit a testing model from brms, use rstan as the backend.
 fit1 <- brm(count ~ zAge + zBase * Trt + (1|patient), 
             cores = parallel::detectCores(), # detect how many cpus/threads are available
             chains = 4,
