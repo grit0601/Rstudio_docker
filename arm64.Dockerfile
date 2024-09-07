@@ -1,9 +1,9 @@
 # This is an Dockerfile for building a docker image for RStudio,
 # with R packages for Bayesian data analysis, and cmdstanr as the backend for Stan.
-# Use R 4.3.1 as base image, which has images for both amd64 and arm64.
+# Use R 4.4.1 as base image, which has images for both amd64 and arm64.
 # This tag itself is minimal, and you need to install other R packages for your purpose by yourself.
 
-ARG BASE_CONTAINER=rocker/rstudio:4.3.1
+ARG BASE_CONTAINER=rocker/verse:4.4.1
 FROM $BASE_CONTAINER
 
 # install libraries for R packages, using docker's root user
